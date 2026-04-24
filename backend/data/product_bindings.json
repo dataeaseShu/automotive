@@ -1,0 +1,1002 @@
+{
+  "prod_001": {
+    "product_id": "prod_001",
+    "product_name": "比亚迪汉EV 2024款",
+    "brand": "比亚迪",
+    "model": "汉EV",
+    "audience_package_id": "aud_byd_han",
+    "audience_package_name": "比亚迪汉EV意向人群包",
+    "targeting_package_id": "tgt_byd_han",
+    "targeting_package_name": "比亚迪汉EV标准定向包"
+  },
+  "prod_002": {
+    "product_id": "prod_002",
+    "product_name": "比亚迪宋Plus DM-i 2024款",
+    "brand": "比亚迪",
+    "model": "宋Plus DM-i",
+    "audience_package_id": "aud_byd_song",
+    "audience_package_name": "比亚迪宋Plus意向人群包",
+    "targeting_package_id": "tgt_byd_song",
+    "targeting_package_name": "比亚迪宋Plus标准定向包"
+  },
+  "prod_003": {
+    "product_id": "prod_003",
+    "product_name": "特斯拉Model Y 2024款",
+    "brand": "特斯拉",
+    "model": "Model Y",
+    "audience_package_id": "aud_tesla_y",
+    "audience_package_name": "特斯拉ModelY意向人群包",
+    "targeting_package_id": "tgt_tesla_y",
+    "targeting_package_name": "特斯拉ModelY标准定向包"
+  },
+  "prod_004": {
+    "product_id": "prod_004",
+    "product_name": "宝马3系 2024款",
+    "brand": "宝马",
+    "model": "3系",
+    "audience_package_id": "aud_bmw_3",
+    "audience_package_name": "宝马3系意向人群包",
+    "targeting_package_id": "tgt_bmw_3",
+    "targeting_package_name": "宝马3系标准定向包"
+  },
+  "prod_005": {
+    "product_id": "prod_005",
+    "product_name": "理想L9 2024款",
+    "brand": "理想",
+    "model": "L9",
+    "audience_package_id": "aud_lixiang_l9",
+    "audience_package_name": "理想L9意向人群包",
+    "targeting_package_id": "tgt_lixiang_l9",
+    "targeting_package_name": "理想L9标准定向包"
+  },
+  "prod_006": {
+    "product_id": "prod_006",
+    "product_name": "理想L7 2024款",
+    "brand": "理想",
+    "model": "L7",
+    "audience_package_id": "aud_prod_006",
+    "audience_package_name": "理想L7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_006",
+    "targeting_package_name": "理想L7 2024款标准定向包"
+  },
+  "prod_007": {
+    "product_id": "prod_007",
+    "product_name": "理想L8 2024款",
+    "brand": "理想",
+    "model": "L8",
+    "audience_package_id": "aud_prod_007",
+    "audience_package_name": "理想L8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_007",
+    "targeting_package_name": "理想L8 2024款标准定向包"
+  },
+  "prod_008": {
+    "product_id": "prod_008",
+    "product_name": "理想MEGA 2024款",
+    "brand": "理想",
+    "model": "MEGA",
+    "audience_package_id": "aud_prod_008",
+    "audience_package_name": "理想MEGA 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_008",
+    "targeting_package_name": "理想MEGA 2024款标准定向包"
+  },
+  "prod_009": {
+    "product_id": "prod_009",
+    "product_name": "比亚迪海豚 2024款",
+    "brand": "比亚迪",
+    "model": "海豚",
+    "audience_package_id": "aud_prod_009",
+    "audience_package_name": "比亚迪海豚 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_009",
+    "targeting_package_name": "比亚迪海豚 2024款标准定向包"
+  },
+  "prod_010": {
+    "product_id": "prod_010",
+    "product_name": "比亚迪海豹 2024款",
+    "brand": "比亚迪",
+    "model": "海豹",
+    "audience_package_id": "aud_prod_010",
+    "audience_package_name": "比亚迪海豹 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_010",
+    "targeting_package_name": "比亚迪海豹 2024款标准定向包"
+  },
+  "prod_011": {
+    "product_id": "prod_011",
+    "product_name": "比亚迪秦Plus DM-i 2024款",
+    "brand": "比亚迪",
+    "model": "秦Plus DM-i",
+    "audience_package_id": "aud_prod_011",
+    "audience_package_name": "比亚迪秦Plus DM-i 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_011",
+    "targeting_package_name": "比亚迪秦Plus DM-i 2024款标准定向包"
+  },
+  "prod_012": {
+    "product_id": "prod_012",
+    "product_name": "比亚迪唐DM-i 2024款",
+    "brand": "比亚迪",
+    "model": "唐DM-i",
+    "audience_package_id": "aud_prod_012",
+    "audience_package_name": "比亚迪唐DM-i 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_012",
+    "targeting_package_name": "比亚迪唐DM-i 2024款标准定向包"
+  },
+  "prod_013": {
+    "product_id": "prod_013",
+    "product_name": "比亚迪元Plus EV 2024款",
+    "brand": "比亚迪",
+    "model": "元Plus EV",
+    "audience_package_id": "aud_prod_013",
+    "audience_package_name": "比亚迪元Plus EV 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_013",
+    "targeting_package_name": "比亚迪元Plus EV 2024款标准定向包"
+  },
+  "prod_014": {
+    "product_id": "prod_014",
+    "product_name": "比亚迪护卫舰07 2024款",
+    "brand": "比亚迪",
+    "model": "护卫舰07",
+    "audience_package_id": "aud_prod_014",
+    "audience_package_name": "比亚迪护卫舰07 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_014",
+    "targeting_package_name": "比亚迪护卫舰07 2024款标准定向包"
+  },
+  "prod_015": {
+    "product_id": "prod_015",
+    "product_name": "比亚迪仰望U8 2024款",
+    "brand": "比亚迪",
+    "model": "仰望U8",
+    "audience_package_id": "aud_prod_015",
+    "audience_package_name": "比亚迪仰望U8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_015",
+    "targeting_package_name": "比亚迪仰望U8 2024款标准定向包"
+  },
+  "prod_016": {
+    "product_id": "prod_016",
+    "product_name": "特斯拉Model 3 2024款",
+    "brand": "特斯拉",
+    "model": "Model 3",
+    "audience_package_id": "aud_prod_016",
+    "audience_package_name": "特斯拉Model 3 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_016",
+    "targeting_package_name": "特斯拉Model 3 2024款标准定向包"
+  },
+  "prod_017": {
+    "product_id": "prod_017",
+    "product_name": "特斯拉Model S 2024款",
+    "brand": "特斯拉",
+    "model": "Model S",
+    "audience_package_id": "aud_prod_017",
+    "audience_package_name": "特斯拉Model S 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_017",
+    "targeting_package_name": "特斯拉Model S 2024款标准定向包"
+  },
+  "prod_018": {
+    "product_id": "prod_018",
+    "product_name": "特斯拉Model X 2024款",
+    "brand": "特斯拉",
+    "model": "Model X",
+    "audience_package_id": "aud_prod_018",
+    "audience_package_name": "特斯拉Model X 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_018",
+    "targeting_package_name": "特斯拉Model X 2024款标准定向包"
+  },
+  "prod_019": {
+    "product_id": "prod_019",
+    "product_name": "宝马5系 2024款",
+    "brand": "宝马",
+    "model": "5系",
+    "audience_package_id": "aud_prod_019",
+    "audience_package_name": "宝马5系 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_019",
+    "targeting_package_name": "宝马5系 2024款标准定向包"
+  },
+  "prod_020": {
+    "product_id": "prod_020",
+    "product_name": "宝马X5 2024款",
+    "brand": "宝马",
+    "model": "X5",
+    "audience_package_id": "aud_prod_020",
+    "audience_package_name": "宝马X5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_020",
+    "targeting_package_name": "宝马X5 2024款标准定向包"
+  },
+  "prod_021": {
+    "product_id": "prod_021",
+    "product_name": "宝马iX3 2024款",
+    "brand": "宝马",
+    "model": "iX3",
+    "audience_package_id": "aud_prod_021",
+    "audience_package_name": "宝马iX3 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_021",
+    "targeting_package_name": "宝马iX3 2024款标准定向包"
+  },
+  "prod_022": {
+    "product_id": "prod_022",
+    "product_name": "奔驰C级 2024款",
+    "brand": "奔驰",
+    "model": "C级",
+    "audience_package_id": "aud_prod_022",
+    "audience_package_name": "奔驰C级 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_022",
+    "targeting_package_name": "奔驰C级 2024款标准定向包"
+  },
+  "prod_023": {
+    "product_id": "prod_023",
+    "product_name": "奔驰E级 2024款",
+    "brand": "奔驰",
+    "model": "E级",
+    "audience_package_id": "aud_prod_023",
+    "audience_package_name": "奔驰E级 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_023",
+    "targeting_package_name": "奔驰E级 2024款标准定向包"
+  },
+  "prod_024": {
+    "product_id": "prod_024",
+    "product_name": "奔驰GLC 2024款",
+    "brand": "奔驰",
+    "model": "GLC",
+    "audience_package_id": "aud_prod_024",
+    "audience_package_name": "奔驰GLC 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_024",
+    "targeting_package_name": "奔驰GLC 2024款标准定向包"
+  },
+  "prod_025": {
+    "product_id": "prod_025",
+    "product_name": "奔驰EQC 2024款",
+    "brand": "奔驰",
+    "model": "EQC",
+    "audience_package_id": "aud_prod_025",
+    "audience_package_name": "奔驰EQC 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_025",
+    "targeting_package_name": "奔驰EQC 2024款标准定向包"
+  },
+  "prod_026": {
+    "product_id": "prod_026",
+    "product_name": "奥迪A4L 2024款",
+    "brand": "奥迪",
+    "model": "A4L",
+    "audience_package_id": "aud_prod_026",
+    "audience_package_name": "奥迪A4L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_026",
+    "targeting_package_name": "奥迪A4L 2024款标准定向包"
+  },
+  "prod_027": {
+    "product_id": "prod_027",
+    "product_name": "奥迪A6L 2024款",
+    "brand": "奥迪",
+    "model": "A6L",
+    "audience_package_id": "aud_prod_027",
+    "audience_package_name": "奥迪A6L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_027",
+    "targeting_package_name": "奥迪A6L 2024款标准定向包"
+  },
+  "prod_028": {
+    "product_id": "prod_028",
+    "product_name": "奥迪Q5L 2024款",
+    "brand": "奥迪",
+    "model": "Q5L",
+    "audience_package_id": "aud_prod_028",
+    "audience_package_name": "奥迪Q5L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_028",
+    "targeting_package_name": "奥迪Q5L 2024款标准定向包"
+  },
+  "prod_029": {
+    "product_id": "prod_029",
+    "product_name": "奥迪e-tron 2024款",
+    "brand": "奥迪",
+    "model": "e-tron",
+    "audience_package_id": "aud_prod_029",
+    "audience_package_name": "奥迪e-tron 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_029",
+    "targeting_package_name": "奥迪e-tron 2024款标准定向包"
+  },
+  "prod_030": {
+    "product_id": "prod_030",
+    "product_name": "大众帕萨特 2024款",
+    "brand": "大众",
+    "model": "帕萨特",
+    "audience_package_id": "aud_prod_030",
+    "audience_package_name": "大众帕萨特 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_030",
+    "targeting_package_name": "大众帕萨特 2024款标准定向包"
+  },
+  "prod_031": {
+    "product_id": "prod_031",
+    "product_name": "大众途观L 2024款",
+    "brand": "大众",
+    "model": "途观L",
+    "audience_package_id": "aud_prod_031",
+    "audience_package_name": "大众途观L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_031",
+    "targeting_package_name": "大众途观L 2024款标准定向包"
+  },
+  "prod_032": {
+    "product_id": "prod_032",
+    "product_name": "大众ID.4 2024款",
+    "brand": "大众",
+    "model": "ID.4",
+    "audience_package_id": "aud_prod_032",
+    "audience_package_name": "大众ID.4 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_032",
+    "targeting_package_name": "大众ID.4 2024款标准定向包"
+  },
+  "prod_033": {
+    "product_id": "prod_033",
+    "product_name": "大众ID.6 2024款",
+    "brand": "大众",
+    "model": "ID.6",
+    "audience_package_id": "aud_prod_033",
+    "audience_package_name": "大众ID.6 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_033",
+    "targeting_package_name": "大众ID.6 2024款标准定向包"
+  },
+  "prod_034": {
+    "product_id": "prod_034",
+    "product_name": "丰田凯美瑞 2024款",
+    "brand": "丰田",
+    "model": "凯美瑞",
+    "audience_package_id": "aud_prod_034",
+    "audience_package_name": "丰田凯美瑞 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_034",
+    "targeting_package_name": "丰田凯美瑞 2024款标准定向包"
+  },
+  "prod_035": {
+    "product_id": "prod_035",
+    "product_name": "丰田RAV4荣放 2024款",
+    "brand": "丰田",
+    "model": "RAV4荣放",
+    "audience_package_id": "aud_prod_035",
+    "audience_package_name": "丰田RAV4荣放 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_035",
+    "targeting_package_name": "丰田RAV4荣放 2024款标准定向包"
+  },
+  "prod_036": {
+    "product_id": "prod_036",
+    "product_name": "丰田汉兰达 2024款",
+    "brand": "丰田",
+    "model": "汉兰达",
+    "audience_package_id": "aud_prod_036",
+    "audience_package_name": "丰田汉兰达 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_036",
+    "targeting_package_name": "丰田汉兰达 2024款标准定向包"
+  },
+  "prod_037": {
+    "product_id": "prod_037",
+    "product_name": "本田雅阁 2024款",
+    "brand": "本田",
+    "model": "雅阁",
+    "audience_package_id": "aud_prod_037",
+    "audience_package_name": "本田雅阁 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_037",
+    "targeting_package_name": "本田雅阁 2024款标准定向包"
+  },
+  "prod_038": {
+    "product_id": "prod_038",
+    "product_name": "本田CR-V 2024款",
+    "brand": "本田",
+    "model": "CR-V",
+    "audience_package_id": "aud_prod_038",
+    "audience_package_name": "本田CR-V 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_038",
+    "targeting_package_name": "本田CR-V 2024款标准定向包"
+  },
+  "prod_039": {
+    "product_id": "prod_039",
+    "product_name": "本田皓影 2024款",
+    "brand": "本田",
+    "model": "皓影",
+    "audience_package_id": "aud_prod_039",
+    "audience_package_name": "本田皓影 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_039",
+    "targeting_package_name": "本田皓影 2024款标准定向包"
+  },
+  "prod_040": {
+    "product_id": "prod_040",
+    "product_name": "日产轩逸 2024款",
+    "brand": "日产",
+    "model": "轩逸",
+    "audience_package_id": "aud_prod_040",
+    "audience_package_name": "日产轩逸 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_040",
+    "targeting_package_name": "日产轩逸 2024款标准定向包"
+  },
+  "prod_041": {
+    "product_id": "prod_041",
+    "product_name": "日产天籁 2024款",
+    "brand": "日产",
+    "model": "天籁",
+    "audience_package_id": "aud_prod_041",
+    "audience_package_name": "日产天籁 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_041",
+    "targeting_package_name": "日产天籁 2024款标准定向包"
+  },
+  "prod_042": {
+    "product_id": "prod_042",
+    "product_name": "小鹏G6 2024款",
+    "brand": "小鹏",
+    "model": "G6",
+    "audience_package_id": "aud_prod_042",
+    "audience_package_name": "小鹏G6 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_042",
+    "targeting_package_name": "小鹏G6 2024款标准定向包"
+  },
+  "prod_043": {
+    "product_id": "prod_043",
+    "product_name": "小鹏G9 2024款",
+    "brand": "小鹏",
+    "model": "G9",
+    "audience_package_id": "aud_prod_043",
+    "audience_package_name": "小鹏G9 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_043",
+    "targeting_package_name": "小鹏G9 2024款标准定向包"
+  },
+  "prod_044": {
+    "product_id": "prod_044",
+    "product_name": "小鹏P7 2024款",
+    "brand": "小鹏",
+    "model": "P7",
+    "audience_package_id": "aud_prod_044",
+    "audience_package_name": "小鹏P7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_044",
+    "targeting_package_name": "小鹏P7 2024款标准定向包"
+  },
+  "prod_045": {
+    "product_id": "prod_045",
+    "product_name": "蔚来ET5 2024款",
+    "brand": "蔚来",
+    "model": "ET5",
+    "audience_package_id": "aud_prod_045",
+    "audience_package_name": "蔚来ET5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_045",
+    "targeting_package_name": "蔚来ET5 2024款标准定向包"
+  },
+  "prod_046": {
+    "product_id": "prod_046",
+    "product_name": "蔚来ET7 2024款",
+    "brand": "蔚来",
+    "model": "ET7",
+    "audience_package_id": "aud_prod_046",
+    "audience_package_name": "蔚来ET7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_046",
+    "targeting_package_name": "蔚来ET7 2024款标准定向包"
+  },
+  "prod_047": {
+    "product_id": "prod_047",
+    "product_name": "蔚来ES6 2024款",
+    "brand": "蔚来",
+    "model": "ES6",
+    "audience_package_id": "aud_prod_047",
+    "audience_package_name": "蔚来ES6 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_047",
+    "targeting_package_name": "蔚来ES6 2024款标准定向包"
+  },
+  "prod_048": {
+    "product_id": "prod_048",
+    "product_name": "蔚来EC6 2024款",
+    "brand": "蔚来",
+    "model": "EC6",
+    "audience_package_id": "aud_prod_048",
+    "audience_package_name": "蔚来EC6 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_048",
+    "targeting_package_name": "蔚来EC6 2024款标准定向包"
+  },
+  "prod_049": {
+    "product_id": "prod_049",
+    "product_name": "问界M5 2024款",
+    "brand": "问界",
+    "model": "M5",
+    "audience_package_id": "aud_prod_049",
+    "audience_package_name": "问界M5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_049",
+    "targeting_package_name": "问界M5 2024款标准定向包"
+  },
+  "prod_050": {
+    "product_id": "prod_050",
+    "product_name": "问界M7 2024款",
+    "brand": "问界",
+    "model": "M7",
+    "audience_package_id": "aud_prod_050",
+    "audience_package_name": "问界M7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_050",
+    "targeting_package_name": "问界M7 2024款标准定向包"
+  },
+  "prod_051": {
+    "product_id": "prod_051",
+    "product_name": "问界M9 2024款",
+    "brand": "问界",
+    "model": "M9",
+    "audience_package_id": "aud_prod_051",
+    "audience_package_name": "问界M9 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_051",
+    "targeting_package_name": "问界M9 2024款标准定向包"
+  },
+  "prod_052": {
+    "product_id": "prod_052",
+    "product_name": "智界S7 2024款",
+    "brand": "智界",
+    "model": "S7",
+    "audience_package_id": "aud_prod_052",
+    "audience_package_name": "智界S7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_052",
+    "targeting_package_name": "智界S7 2024款标准定向包"
+  },
+  "prod_053": {
+    "product_id": "prod_053",
+    "product_name": "阿维塔11 2024款",
+    "brand": "阿维塔",
+    "model": "11",
+    "audience_package_id": "aud_prod_053",
+    "audience_package_name": "阿维塔11 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_053",
+    "targeting_package_name": "阿维塔11 2024款标准定向包"
+  },
+  "prod_054": {
+    "product_id": "prod_054",
+    "product_name": "极氪001 2024款",
+    "brand": "极氪",
+    "model": "001",
+    "audience_package_id": "aud_prod_054",
+    "audience_package_name": "极氪001 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_054",
+    "targeting_package_name": "极氪001 2024款标准定向包"
+  },
+  "prod_055": {
+    "product_id": "prod_055",
+    "product_name": "极氪007 2024款",
+    "brand": "极氪",
+    "model": "007",
+    "audience_package_id": "aud_prod_055",
+    "audience_package_name": "极氪007 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_055",
+    "targeting_package_name": "极氪007 2024款标准定向包"
+  },
+  "prod_056": {
+    "product_id": "prod_056",
+    "product_name": "极氪X 2024款",
+    "brand": "极氪",
+    "model": "X",
+    "audience_package_id": "aud_prod_056",
+    "audience_package_name": "极氪X 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_056",
+    "targeting_package_name": "极氪X 2024款标准定向包"
+  },
+  "prod_057": {
+    "product_id": "prod_057",
+    "product_name": "吉利星越L 2024款",
+    "brand": "吉利",
+    "model": "星越L",
+    "audience_package_id": "aud_prod_057",
+    "audience_package_name": "吉利星越L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_057",
+    "targeting_package_name": "吉利星越L 2024款标准定向包"
+  },
+  "prod_058": {
+    "product_id": "prod_058",
+    "product_name": "吉利银河L7 2024款",
+    "brand": "吉利银河",
+    "model": "银河L7",
+    "audience_package_id": "aud_prod_058",
+    "audience_package_name": "吉利银河L7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_058",
+    "targeting_package_name": "吉利银河L7 2024款标准定向包"
+  },
+  "prod_059": {
+    "product_id": "prod_059",
+    "product_name": "领克01 2024款",
+    "brand": "领克",
+    "model": "01",
+    "audience_package_id": "aud_prod_059",
+    "audience_package_name": "领克01 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_059",
+    "targeting_package_name": "领克01 2024款标准定向包"
+  },
+  "prod_060": {
+    "product_id": "prod_060",
+    "product_name": "领克08 2024款",
+    "brand": "领克",
+    "model": "08",
+    "audience_package_id": "aud_prod_060",
+    "audience_package_name": "领克08 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_060",
+    "targeting_package_name": "领克08 2024款标准定向包"
+  },
+  "prod_061": {
+    "product_id": "prod_061",
+    "product_name": "长城哈弗H6 2024款",
+    "brand": "长城",
+    "model": "哈弗H6",
+    "audience_package_id": "aud_prod_061",
+    "audience_package_name": "长城哈弗H6 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_061",
+    "targeting_package_name": "长城哈弗H6 2024款标准定向包"
+  },
+  "prod_062": {
+    "product_id": "prod_062",
+    "product_name": "坦克300 2024款",
+    "brand": "坦克",
+    "model": "300",
+    "audience_package_id": "aud_prod_062",
+    "audience_package_name": "坦克300 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_062",
+    "targeting_package_name": "坦克300 2024款标准定向包"
+  },
+  "prod_063": {
+    "product_id": "prod_063",
+    "product_name": "坦克500 2024款",
+    "brand": "坦克",
+    "model": "500",
+    "audience_package_id": "aud_prod_063",
+    "audience_package_name": "坦克500 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_063",
+    "targeting_package_name": "坦克500 2024款标准定向包"
+  },
+  "prod_064": {
+    "product_id": "prod_064",
+    "product_name": "红旗H5 2024款",
+    "brand": "红旗",
+    "model": "H5",
+    "audience_package_id": "aud_prod_064",
+    "audience_package_name": "红旗H5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_064",
+    "targeting_package_name": "红旗H5 2024款标准定向包"
+  },
+  "prod_065": {
+    "product_id": "prod_065",
+    "product_name": "红旗H9 2024款",
+    "brand": "红旗",
+    "model": "H9",
+    "audience_package_id": "aud_prod_065",
+    "audience_package_name": "红旗H9 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_065",
+    "targeting_package_name": "红旗H9 2024款标准定向包"
+  },
+  "prod_066": {
+    "product_id": "prod_066",
+    "product_name": "红旗E-HS9 2024款",
+    "brand": "红旗",
+    "model": "E-HS9",
+    "audience_package_id": "aud_prod_066",
+    "audience_package_name": "红旗E-HS9 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_066",
+    "targeting_package_name": "红旗E-HS9 2024款标准定向包"
+  },
+  "prod_067": {
+    "product_id": "prod_067",
+    "product_name": "别克GL8 2024款",
+    "brand": "别克",
+    "model": "GL8",
+    "audience_package_id": "aud_prod_067",
+    "audience_package_name": "别克GL8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_067",
+    "targeting_package_name": "别克GL8 2024款标准定向包"
+  },
+  "prod_068": {
+    "product_id": "prod_068",
+    "product_name": "别克昂科威Plus 2024款",
+    "brand": "别克",
+    "model": "昂科威Plus",
+    "audience_package_id": "aud_prod_068",
+    "audience_package_name": "别克昂科威Plus 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_068",
+    "targeting_package_name": "别克昂科威Plus 2024款标准定向包"
+  },
+  "prod_069": {
+    "product_id": "prod_069",
+    "product_name": "雪佛兰探界者 2024款",
+    "brand": "雪佛兰",
+    "model": "探界者",
+    "audience_package_id": "aud_prod_069",
+    "audience_package_name": "雪佛兰探界者 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_069",
+    "targeting_package_name": "雪佛兰探界者 2024款标准定向包"
+  },
+  "prod_070": {
+    "product_id": "prod_070",
+    "product_name": "福特蒙迪欧 2024款",
+    "brand": "福特",
+    "model": "蒙迪欧",
+    "audience_package_id": "aud_prod_070",
+    "audience_package_name": "福特蒙迪欧 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_070",
+    "targeting_package_name": "福特蒙迪欧 2024款标准定向包"
+  },
+  "prod_071": {
+    "product_id": "prod_071",
+    "product_name": "福特锐界L 2024款",
+    "brand": "福特",
+    "model": "锐界L",
+    "audience_package_id": "aud_prod_071",
+    "audience_package_name": "福特锐界L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_071",
+    "targeting_package_name": "福特锐界L 2024款标准定向包"
+  },
+  "prod_072": {
+    "product_id": "prod_072",
+    "product_name": "马自达CX-5 2024款",
+    "brand": "马自达",
+    "model": "CX-5",
+    "audience_package_id": "aud_prod_072",
+    "audience_package_name": "马自达CX-5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_072",
+    "targeting_package_name": "马自达CX-5 2024款标准定向包"
+  },
+  "prod_073": {
+    "product_id": "prod_073",
+    "product_name": "马自达阿特兹 2024款",
+    "brand": "马自达",
+    "model": "阿特兹",
+    "audience_package_id": "aud_prod_073",
+    "audience_package_name": "马自达阿特兹 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_073",
+    "targeting_package_name": "马自达阿特兹 2024款标准定向包"
+  },
+  "prod_074": {
+    "product_id": "prod_074",
+    "product_name": "保时捷Macan 2024款",
+    "brand": "保时捷",
+    "model": "Macan",
+    "audience_package_id": "aud_prod_074",
+    "audience_package_name": "保时捷Macan 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_074",
+    "targeting_package_name": "保时捷Macan 2024款标准定向包"
+  },
+  "prod_075": {
+    "product_id": "prod_075",
+    "product_name": "保时捷Cayenne 2024款",
+    "brand": "保时捷",
+    "model": "Cayenne",
+    "audience_package_id": "aud_prod_075",
+    "audience_package_name": "保时捷Cayenne 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_075",
+    "targeting_package_name": "保时捷Cayenne 2024款标准定向包"
+  },
+  "prod_076": {
+    "product_id": "prod_076",
+    "product_name": "路虎揽胜极光 2024款",
+    "brand": "路虎",
+    "model": "揽胜极光",
+    "audience_package_id": "aud_prod_076",
+    "audience_package_name": "路虎揽胜极光 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_076",
+    "targeting_package_name": "路虎揽胜极光 2024款标准定向包"
+  },
+  "prod_077": {
+    "product_id": "prod_077",
+    "product_name": "路虎发现运动版 2024款",
+    "brand": "路虎",
+    "model": "发现运动版",
+    "audience_package_id": "aud_prod_077",
+    "audience_package_name": "路虎发现运动版 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_077",
+    "targeting_package_name": "路虎发现运动版 2024款标准定向包"
+  },
+  "prod_078": {
+    "product_id": "prod_078",
+    "product_name": "沃尔沃XC60 2024款",
+    "brand": "沃尔沃",
+    "model": "XC60",
+    "audience_package_id": "aud_prod_078",
+    "audience_package_name": "沃尔沃XC60 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_078",
+    "targeting_package_name": "沃尔沃XC60 2024款标准定向包"
+  },
+  "prod_079": {
+    "product_id": "prod_079",
+    "product_name": "沃尔沃S90 2024款",
+    "brand": "沃尔沃",
+    "model": "S90",
+    "audience_package_id": "aud_prod_079",
+    "audience_package_name": "沃尔沃S90 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_079",
+    "targeting_package_name": "沃尔沃S90 2024款标准定向包"
+  },
+  "prod_080": {
+    "product_id": "prod_080",
+    "product_name": "凯迪拉克XT5 2024款",
+    "brand": "凯迪拉克",
+    "model": "XT5",
+    "audience_package_id": "aud_prod_080",
+    "audience_package_name": "凯迪拉克XT5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_080",
+    "targeting_package_name": "凯迪拉克XT5 2024款标准定向包"
+  },
+  "prod_081": {
+    "product_id": "prod_081",
+    "product_name": "凯迪拉克CT5 2024款",
+    "brand": "凯迪拉克",
+    "model": "CT5",
+    "audience_package_id": "aud_prod_081",
+    "audience_package_name": "凯迪拉克CT5 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_081",
+    "targeting_package_name": "凯迪拉克CT5 2024款标准定向包"
+  },
+  "prod_082": {
+    "product_id": "prod_082",
+    "product_name": "捷途旅行者 2024款",
+    "brand": "捷途",
+    "model": "旅行者",
+    "audience_package_id": "aud_prod_082",
+    "audience_package_name": "捷途旅行者 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_082",
+    "targeting_package_name": "捷途旅行者 2024款标准定向包"
+  },
+  "prod_083": {
+    "product_id": "prod_083",
+    "product_name": "奇瑞瑞虎8 2024款",
+    "brand": "奇瑞",
+    "model": "瑞虎8",
+    "audience_package_id": "aud_prod_083",
+    "audience_package_name": "奇瑞瑞虎8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_083",
+    "targeting_package_name": "奇瑞瑞虎8 2024款标准定向包"
+  },
+  "prod_084": {
+    "product_id": "prod_084",
+    "product_name": "奇瑞艾瑞泽8 2024款",
+    "brand": "奇瑞",
+    "model": "艾瑞泽8",
+    "audience_package_id": "aud_prod_084",
+    "audience_package_name": "奇瑞艾瑞泽8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_084",
+    "targeting_package_name": "奇瑞艾瑞泽8 2024款标准定向包"
+  },
+  "prod_085": {
+    "product_id": "prod_085",
+    "product_name": "捷豹XEL 2024款",
+    "brand": "捷豹",
+    "model": "XEL",
+    "audience_package_id": "aud_prod_085",
+    "audience_package_name": "捷豹XEL 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_085",
+    "targeting_package_name": "捷豹XEL 2024款标准定向包"
+  },
+  "prod_086": {
+    "product_id": "prod_086",
+    "product_name": "捷豹F-PACE 2024款",
+    "brand": "捷豹",
+    "model": "F-PACE",
+    "audience_package_id": "aud_prod_086",
+    "audience_package_name": "捷豹F-PACE 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_086",
+    "targeting_package_name": "捷豹F-PACE 2024款标准定向包"
+  },
+  "prod_087": {
+    "product_id": "prod_087",
+    "product_name": "雷克萨斯ES 2024款",
+    "brand": "雷克萨斯",
+    "model": "ES",
+    "audience_package_id": "aud_prod_087",
+    "audience_package_name": "雷克萨斯ES 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_087",
+    "targeting_package_name": "雷克萨斯ES 2024款标准定向包"
+  },
+  "prod_088": {
+    "product_id": "prod_088",
+    "product_name": "雷克萨斯RX 2024款",
+    "brand": "雷克萨斯",
+    "model": "RX",
+    "audience_package_id": "aud_prod_088",
+    "audience_package_name": "雷克萨斯RX 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_088",
+    "targeting_package_name": "雷克萨斯RX 2024款标准定向包"
+  },
+  "prod_089": {
+    "product_id": "prod_089",
+    "product_name": "smart精灵#1 2024款",
+    "brand": "smart",
+    "model": "精灵#1",
+    "audience_package_id": "aud_prod_089",
+    "audience_package_name": "smart精灵#1 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_089",
+    "targeting_package_name": "smart精灵#1 2024款标准定向包"
+  },
+  "prod_090": {
+    "product_id": "prod_090",
+    "product_name": "欧拉好猫 2024款",
+    "brand": "欧拉",
+    "model": "好猫",
+    "audience_package_id": "aud_prod_090",
+    "audience_package_name": "欧拉好猫 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_090",
+    "targeting_package_name": "欧拉好猫 2024款标准定向包"
+  },
+  "prod_091": {
+    "product_id": "prod_091",
+    "product_name": "哪吒L 2024款",
+    "brand": "哪吒",
+    "model": "L",
+    "audience_package_id": "aud_prod_091",
+    "audience_package_name": "哪吒L 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_091",
+    "targeting_package_name": "哪吒L 2024款标准定向包"
+  },
+  "prod_092": {
+    "product_id": "prod_092",
+    "product_name": "零跑C11 2024款",
+    "brand": "零跑",
+    "model": "C11",
+    "audience_package_id": "aud_prod_092",
+    "audience_package_name": "零跑C11 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_092",
+    "targeting_package_name": "零跑C11 2024款标准定向包"
+  },
+  "prod_093": {
+    "product_id": "prod_093",
+    "product_name": "零跑C10 2024款",
+    "brand": "零跑",
+    "model": "C10",
+    "audience_package_id": "aud_prod_093",
+    "audience_package_name": "零跑C10 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_093",
+    "targeting_package_name": "零跑C10 2024款标准定向包"
+  },
+  "prod_094": {
+    "product_id": "prod_094",
+    "product_name": "深蓝S7 2024款",
+    "brand": "深蓝",
+    "model": "S7",
+    "audience_package_id": "aud_prod_094",
+    "audience_package_name": "深蓝S7 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_094",
+    "targeting_package_name": "深蓝S7 2024款标准定向包"
+  },
+  "prod_095": {
+    "product_id": "prod_095",
+    "product_name": "深蓝SL03 2024款",
+    "brand": "深蓝",
+    "model": "SL03",
+    "audience_package_id": "aud_prod_095",
+    "audience_package_name": "深蓝SL03 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_095",
+    "targeting_package_name": "深蓝SL03 2024款标准定向包"
+  },
+  "prod_096": {
+    "product_id": "prod_096",
+    "product_name": "岚图FREE 2024款",
+    "brand": "岚图",
+    "model": "FREE",
+    "audience_package_id": "aud_prod_096",
+    "audience_package_name": "岚图FREE 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_096",
+    "targeting_package_name": "岚图FREE 2024款标准定向包"
+  },
+  "prod_097": {
+    "product_id": "prod_097",
+    "product_name": "岚图梦想家 2024款",
+    "brand": "岚图",
+    "model": "梦想家",
+    "audience_package_id": "aud_prod_097",
+    "audience_package_name": "岚图梦想家 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_097",
+    "targeting_package_name": "岚图梦想家 2024款标准定向包"
+  },
+  "prod_098": {
+    "product_id": "prod_098",
+    "product_name": "广汽传祺M8 2024款",
+    "brand": "广汽传祺",
+    "model": "M8",
+    "audience_package_id": "aud_prod_098",
+    "audience_package_name": "广汽传祺M8 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_098",
+    "targeting_package_name": "广汽传祺M8 2024款标准定向包"
+  },
+  "prod_099": {
+    "product_id": "prod_099",
+    "product_name": "广汽埃安AION Y 2024款",
+    "brand": "广汽埃安",
+    "model": "AION Y",
+    "audience_package_id": "aud_prod_099",
+    "audience_package_name": "广汽埃安AION Y 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_099",
+    "targeting_package_name": "广汽埃安AION Y 2024款标准定向包"
+  },
+  "prod_100": {
+    "product_id": "prod_100",
+    "product_name": "广汽埃安AION S 2024款",
+    "brand": "广汽埃安",
+    "model": "AION S",
+    "audience_package_id": "aud_prod_100",
+    "audience_package_name": "广汽埃安AION S 2024款意向人群包",
+    "targeting_package_id": "tgt_prod_100",
+    "targeting_package_name": "广汽埃安AION S 2024款标准定向包"
+  }
+}
