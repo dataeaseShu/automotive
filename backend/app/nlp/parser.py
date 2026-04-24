@@ -63,17 +63,25 @@ def _parse_goal(text: str) -> Optional[SlotField]:
 # ─── 定向人群 ──────────────────────────────────────────────────────────────
 _GENDER_MALE = re.compile(r"男性|男人|男士|男生|(?<![女])男(?!性女)")
 _GENDER_FEMALE = re.compile(r"女性|女人|女士|女生|(?<![男])女(?!性男)")
+_AUDIENCE_HINT = re.compile(r"人群|受众|定向|年龄|岁")
 _AGE_MAP = [
     (re.compile(r"00后|零零后|Z世代"), "18-25"),
     (re.compile(r"90后|九零后|年轻人|年轻"), "18-35"),
     (re.compile(r"80后|八零后"), "35-45"),
     (re.compile(r"70后|七零后"), "45-55"),
     (re.compile(r"中年|中年人"), "35-50"),
-    (re.compile(r"18[-~到至](\d{2})岁?"), None),
+    # 任意起始年龄区间：25-40、25到40岁、25~40 等
+    (re.compile(r"(\d{1,2})\s*[-~到至]\s*(\d{2})\s*岁?"), None),
+    # 单点年龄：30岁、35岁
+    (re.compile(r"(\d{1,2})\s*岁"), None),
 ]
 
 
-def _parse_audience(text: str) -> Optional[SlotField]:
+def _parse_audience(text: str, pending_audience: bool = False) -> Optional[SlotField]:
+    """解析人群定向槽位。
+
+    pending_audience=True 时允许把裸数字识别为年龄（适用于槽位追问上下文）。
+    """
     gender = "both"
     has_male = bool(_GENDER_MALE.search(text))
     has_female = bool(_GENDER_FEMALE.search(text))
@@ -88,13 +96,36 @@ def _parse_audience(text: str) -> Optional[SlotField]:
         m = pattern.search(text)
         if m:
             if mapped:
+                # 固定映射（世代标签等）
                 age_range = mapped
                 age_source = m.group(0)
+            elif m.lastindex == 2:
+                # 任意区间 (\d{1,2})-(\d{2})
+                age_range = f"{m.group(1)}-{m.group(2)}"
+                age_source = m.group(0)
             else:
-                end = m.group(1)
-                age_range = f"18-{end}"
+                # 单点年龄 (\d{1,2})岁
+                age_range = m.group(1)
                 age_source = m.group(0)
             break
+
+    # 上下文追问或明确人群语义时：数字可视为年龄
+    if age_range is None and (pending_audience or _AUDIENCE_HINT.search(text)):
+        # 先尝试整句就是数字（如 "30"）
+        bare = re.fullmatch(r"\s*(\d{1,2})\s*", text)
+        if bare:
+            val = int(bare.group(1))
+            if 10 <= val <= 80:
+                age_range = str(val)
+                age_source = bare.group(1)
+        else:
+            # 再尝试语义短句中的单个年龄（如 "投放人群30"、"年龄30"）
+            embedded = re.search(r"(?<!\d)(\d{1,2})(?!\d)", text)
+            if embedded:
+                val = int(embedded.group(1))
+                if 10 <= val <= 80:
+                    age_range = str(val)
+                    age_source = embedded.group(1)
 
     if gender == "both" and age_range is None:
         return None
@@ -121,7 +152,7 @@ def _normalize(text: str) -> str:
 
 # ─── 规则解析 ──────────────────────────────────────────────────────────────
 
-def _parse_slots_rule(text: str) -> PlanSlots:
+def _parse_slots_rule(text: str, pending_slot: Optional[str] = None) -> PlanSlots:
     slots = PlanSlots()
 
     vehicle_result = _vehicle_lexicon.match(text)
@@ -132,16 +163,16 @@ def _parse_slots_rule(text: str) -> PlanSlots:
     slots.scene = _parse_scene(text)
     slots.goal = _parse_goal(text)
     slots.location = parse_location(text)
-    slots.audience = _parse_audience(text)
-    slots.budget = parse_budget(text)
-    slots.bid_strategy = parse_bid_strategy(text)
-    slots.schedule = parse_schedule(text)
+    slots.audience = _parse_audience(text, pending_audience=(pending_slot == "audience"))
+    slots.budget = parse_budget(text, pending_budget=(pending_slot == "budget"))
+    slots.bid_strategy = parse_bid_strategy(text, pending_bid=(pending_slot == "bid_strategy"))
+    slots.schedule = parse_schedule(text, pending_schedule=(pending_slot == "schedule"))
     return slots
 
 
 # ─── LLM 映射 ───────────────────────────────────────────────────────────────
 
-def _llm_to_slots(llm_result: dict[str, Any]) -> PlanSlots:
+def _llm_to_slots(llm_result: dict[str, Any], allow_location: bool = True) -> PlanSlots:
     slots = PlanSlots()
     conf = float(llm_result.get("confidence", 0.7) or 0.7)
 
@@ -154,7 +185,7 @@ def _llm_to_slots(llm_result: dict[str, Any]) -> PlanSlots:
     if llm_result.get("goal") in {"store_traffic", "test_drive", "lead_collection"}:
         slots.goal = SlotField(value=llm_result["goal"], confidence=conf, source="llm")
 
-    if isinstance(llm_result.get("location"), dict):
+    if allow_location and isinstance(llm_result.get("location"), dict):
         loc = llm_result["location"]
         loc_type = loc.get("type")
         if loc_type in {"radius", "city", "nationwide"}:
@@ -169,14 +200,23 @@ def _llm_to_slots(llm_result: dict[str, Any]) -> PlanSlots:
     if isinstance(budget, (int, float)) and budget > 0:
         slots.budget = SlotField(value=int(budget), confidence=conf, source="llm")
 
-    if isinstance(llm_result.get("bid_strategy"), dict):
-        slots.bid_strategy = SlotField(value=llm_result["bid_strategy"], confidence=conf, source="llm")
+    # bid_strategy：需要 type 字段合法才接受
+    bs = llm_result.get("bid_strategy")
+    if isinstance(bs, dict) and bs.get("type") in {"manual", "auto"}:
+        slots.bid_strategy = SlotField(value=bs, confidence=conf, source="llm")
 
-    if isinstance(llm_result.get("schedule"), dict):
-        slots.schedule = SlotField(value=llm_result["schedule"], confidence=conf, source="llm")
+    # schedule：需要 days 为正整数才接受，避免 {"days": null} 覆盖规则结果
+    sc = llm_result.get("schedule")
+    if isinstance(sc, dict) and isinstance(sc.get("days"), (int, float)) and sc["days"] > 0:
+        slots.schedule = SlotField(value=sc, confidence=conf, source="llm")
 
-    if isinstance(llm_result.get("audience"), dict):
-        slots.audience = SlotField(value=llm_result["audience"], confidence=conf, source="llm")
+    # audience：需要 gender 或 age_range 有实际内容才接受
+    aud = llm_result.get("audience")
+    if isinstance(aud, dict) and (
+        aud.get("gender") in {"male", "female", "both"}
+        or (aud.get("age_range") and str(aud["age_range"]).strip())
+    ):
+        slots.audience = SlotField(value=aud, confidence=conf, source="llm")
 
     return slots
 
@@ -218,44 +258,47 @@ def fill_defaults(slots: PlanSlots) -> PlanSlots:
 
 # ─── 主流水线 ──────────────────────────────────────────────────────────────
 
-async def parse_slots(text: str, existing: Optional[PlanSlots] = None) -> PlanSlots:
+async def parse_slots(text: str, existing: Optional[PlanSlots] = None, pending_slot: Optional[str] = None) -> PlanSlots:
     """
     解析用户输入并融合槽位：LLM > 规则 > existing。
-    最终自动填充默认值。
+    pending_slot 传入当前正在追问的槽位名（如 "audience"），提升纯文本回复的解析精度。
+    注意：不自动填充默认值，由调用方在进入 preview 前统一调用 fill_defaults。
     """
     normalized = _normalize(text)
     base = existing or PlanSlots()
 
-    rule_slots = _parse_slots_rule(normalized)
+    rule_slots = _parse_slots_rule(normalized, pending_slot=pending_slot)
     merged = base.merge(rule_slots)
 
     try:
         extractor = get_llm_extractor()
-        llm_result = await extractor.extract_intent_and_fields_async(normalized, merged)
+        llm_result = await extractor.extract_intent_and_fields_async(normalized, merged, pending_slot=pending_slot)
         if llm_result and float(llm_result.get("confidence", 0) or 0) >= 0.35:
-            llm_slots = _llm_to_slots(llm_result)
+            allow_location = pending_slot == "location" or rule_slots.location is not None
+            llm_slots = _llm_to_slots(llm_result, allow_location=allow_location)
             merged = merged.merge(llm_slots)
     except Exception:
         # LLM 非阻断能力：失败时保留规则结果
         pass
 
-    return fill_defaults(merged)
+    return merged
 
 
-async def parse_slots_with_intent(text: str, existing: Optional[PlanSlots] = None) -> tuple[PlanSlots, str]:
+async def parse_slots_with_intent(text: str, existing: Optional[PlanSlots] = None, pending_slot: Optional[str] = None) -> tuple[PlanSlots, str]:
     """
     一次 LLM 调用同时返回解析后的槽位和意图，避免重复调用。
+    注意：不自动填充默认值，由调用方在进入 preview 前统一调用 fill_defaults。
     """
     normalized = _normalize(text)
     base = existing or PlanSlots()
 
-    rule_slots = _parse_slots_rule(normalized)
+    rule_slots = _parse_slots_rule(normalized, pending_slot=pending_slot)
     merged = base.merge(rule_slots)
     intent = "isCreate"  # 默认意图
 
     try:
         extractor = get_llm_extractor()
-        llm_result = await extractor.extract_intent_and_fields_async(normalized, merged)
+        llm_result = await extractor.extract_intent_and_fields_async(normalized, merged, pending_slot=pending_slot)
         if llm_result:
             # 提取意图
             raw_intent = llm_result.get("intent")
@@ -263,13 +306,14 @@ async def parse_slots_with_intent(text: str, existing: Optional[PlanSlots] = Non
                 intent = raw_intent
             # 融合槽位
             if float(llm_result.get("confidence", 0) or 0) >= 0.35:
-                llm_slots = _llm_to_slots(llm_result)
+                allow_location = pending_slot == "location" or rule_slots.location is not None
+                llm_slots = _llm_to_slots(llm_result, allow_location=allow_location)
                 merged = merged.merge(llm_slots)
     except Exception:
         # LLM 非阻断能力：失败时保留规则结果，意图用规则推断
         intent = _detect_intent_by_rule(normalized)
 
-    return fill_defaults(merged), intent
+    return merged, intent
 
 
 def get_next_clarification(slots: PlanSlots, threshold: float = 0.7) -> Optional[str]:

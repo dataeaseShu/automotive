@@ -43,8 +43,6 @@ export interface PlanConfirmData {
   bid_strategy: string
   schedule: string
   audience: Record<string, string>
-  product_id: string
-  product_name: string
 }
 
 export interface ChatMessageData {

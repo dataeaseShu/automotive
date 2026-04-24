@@ -1,0 +1,105 @@
+skill: automotive_marketing
+
+# ── 触发关键词（can_handle 用）────────────────────────────────────────────────
+entry_keywords:
+  - 投放
+  - 推广
+  - 建计划
+  - 创建计划
+  - 新建计划
+  - 预算
+  - 出价
+  - 同城
+  - 全国
+  - 直播
+  - 短视频
+  - 线索
+  - 门店
+  - 试驾
+  - 车型
+  - 商品
+  - 巨量
+  - 引流
+
+# ── 计划确认文本 ─────────────────────────────────────────────────────────────
+confirm_texts:
+  - 确认推送计划至巨量引擎
+  - 确认推送
+  - 确认提交
+  - 提交
+
+# ── 槽位填写顺序 ─────────────────────────────────────────────────────────────
+required_slots_order:
+  - vehicle
+  - scene
+  - goal
+  - location
+  - audience
+  - budget
+  - bid_strategy
+  - schedule
+
+# ── 槽位引导话术 ─────────────────────────────────────────────────────────────
+slot_prompts:
+  vehicle: "请先告诉我推广车型（如：比亚迪汉EV、特斯拉Model 3）。"
+  scene: "请确认营销场景：短视频 或 直播。"
+  goal: "请确认营销目标：门店引流 / 试驾预约 / 线索收集。"
+  location: "请确认投放地域：同城 / 全国 / 周边X公里。"
+  audience: "请设置投放人群（如：男性，25-40岁）。"
+  budget: "请设置预算（如：50000元 或 10万）。"
+  bid_strategy: "请设置出价策略：智能出价 或 手动出价X元。"
+  schedule: "请设置排期（如：投放7天 / 30天）。"
+
+# ── 路由规则（按顺序匹配，第一条满足的节点生效）──────────────────────────────
+# condition.type 可选值：
+#   field_set      — session.<field> 为真
+#   field_not_set  — session.<field> 为假/None
+#   state_is       — session.state == state
+#   state_in       — session.state in states
+#   always         — 无条件匹配（兜底）
+routing_rules:
+  - condition:
+      type: field_not_set
+      field: selected_product_id
+    node: product
+
+  - condition:
+      type: state_is
+      state: CREATIVE_SELECTION
+    node: creative
+
+  - condition:
+      type: state_is
+      state: PREVIEW
+    node: preview
+
+  - condition:
+      type: state_in
+      states: [SLOT_FILLING, PRODUCT_SELECTED]
+    node: slot
+
+  - condition:
+      type: always
+    node: fallback
+
+# ── 节点定义（node name → action handler name）──────────────────────────────
+nodes:
+  product:
+    description: 商品选择阶段
+    action: handle_product_stage
+
+  creative:
+    description: 创意素材选择阶段
+    action: handle_creative_stage
+
+  slot:
+    description: 投放参数槽位填写阶段
+    action: handle_slot_stage
+
+  preview:
+    description: 计划预览与确认阶段
+    action: handle_preview_stage
+
+  fallback:
+    description: 兜底通用处理节点
+    action: handle_fallback_stage

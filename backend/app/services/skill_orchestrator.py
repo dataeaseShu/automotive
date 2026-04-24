@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from app.models.session import MessageType, Session
+from app.nlp.parser import parse_slots_with_intent
 from app.services.llm_chat_service import chat_with_llm
 from app.skills.automotive_marketing import AutomotiveMarketingSkill, slots_summary
 
@@ -18,11 +19,33 @@ class SkillOrchestrator:
             if result.handled:
                 return result.messages
 
+        if await self._should_activate_automotive_skill(session, text):
+            session.active_skill = self.automotive_skill.name
+            result = await self.automotive_skill.handle_message(session, text)
+            if result.handled:
+                return result.messages
+
         # 主工程保留通用 LLM 对话能力
         session.active_skill = None
         answer = await chat_with_llm(session, text)
         session.add_message("assistant", answer)
         return [{"type": MessageType.TEXT, "content": answer}]
+
+    async def _should_activate_automotive_skill(self, session: Session, text: str) -> bool:
+        if session.active_skill == self.automotive_skill.name:
+            return True
+
+        probe_slots, intent = await parse_slots_with_intent(text, session.slots)
+        if intent not in {"isCreate", "isModify", "isConfirm"}:
+            return False
+
+        return self._has_any_slot_value(probe_slots)
+
+    def _has_any_slot_value(self, slots: Any) -> bool:
+        for field in self.automotive_skill.required_slots_order:
+            if getattr(slots, field, None) is not None:
+                return True
+        return False
 
     async def select_product(self, session: Session, product_id: str, product: dict[str, Any]) -> list[dict[str, Any]]:
         if session.active_skill == self.automotive_skill.name:

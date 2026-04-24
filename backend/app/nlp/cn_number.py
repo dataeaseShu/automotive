@@ -27,6 +27,8 @@ _UNIT_MAP = {
 
 _MONEY_UNIT = {
     "万": 10_000,
+    "w": 10_000,
+    "W": 10_000,
     "千": 1_000,
     "百": 100,
     "亿": 100_000_000,
@@ -48,7 +50,7 @@ def cn_to_int(text: str) -> int | None:
         return int(text)
 
     # 数字+中文单位，如 "2万"、"1.5万"
-    m = re.fullmatch(r"(\d+\.?\d*)\s*([万千百亿])", text)
+    m = re.fullmatch(r"(\d+\.?\d*)\s*([wW万千百亿])", text)
     if m:
         num, unit = float(m.group(1)), _MONEY_UNIT.get(m.group(2), 1)
         return int(num * unit)
@@ -96,7 +98,7 @@ def extract_number(text: str) -> tuple[float | None, str]:
     返回 (数值, 原文片段)
     """
     # 先尝试 "数字+中文单位"，如 "2万"
-    m = re.search(r"(\d+\.?\d*)\s*([万千百亿])", text)
+    m = re.search(r"(\d+\.?\d*)\s*([wW万千百亿])", text)
     if m:
         num = float(m.group(1)) * _MONEY_UNIT.get(m.group(2), 1)
         return int(num), m.group(0)

@@ -78,11 +78,12 @@ class PlanSlots(BaseModel):
     schedule: Optional[SlotField] = None       # 排期
 
     # 必填槽位列表（未填时需追问）
-    REQUIRED: List[str] = ["vehicle", "scene", "goal", "location", "budget"]
+    REQUIRED: List[str] = ["vehicle", "scene", "goal", "location", "audience", "budget", "bid_strategy", "schedule"]
 
-    def missing_required(self) -> List[str]:
-        """返回缺失的必填槽位名"""
-        return [f for f in self.REQUIRED if getattr(self, f) is None]
+    def missing_required(self, order: Optional[List[str]] = None) -> List[str]:
+        """返回缺失的必填槽位名。"""
+        fields = order or self.REQUIRED
+        return [f for f in fields if getattr(self, f) is None]
 
     def low_confidence_fields(self, threshold: float = 0.7) -> List[str]:
         """返回置信度低于阈值的已填槽位名"""

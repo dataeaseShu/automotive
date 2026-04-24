@@ -22,7 +22,6 @@ export default function PlanConfirmCard({ data, onConfirm }: Props) {
     { label: '预算(元)', value: typeof data.budget === 'number' ? data.budget.toLocaleString() : '—' },
     { label: '出价策略', value: data.bid_strategy || '—' },
     { label: '投放排期', value: data.schedule || '—' },
-    { label: '推送商品', value: data.product_name || '—' },
     { label: '定向人群', value: audienceText, full: true },
   ]
 

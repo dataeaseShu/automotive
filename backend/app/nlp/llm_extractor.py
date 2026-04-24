@@ -49,7 +49,7 @@ class LLMFieldExtractor:
     def extract_intent_and_fields(self, user_input: str, existing_slots: Optional[PlanSlots] = None) -> Dict[str, Any]:
         raise NotImplementedError("Use extract_intent_and_fields_async instead")
 
-    async def extract_intent_and_fields_async(self, user_input: str, existing_slots: Optional[PlanSlots] = None) -> Dict[str, Any]:
+    async def extract_intent_and_fields_async(self, user_input: str, existing_slots: Optional[PlanSlots] = None, pending_slot: Optional[str] = None) -> Dict[str, Any]:
         if not self.client:
             return {"intent": "isCreate", "confidence": 0, "fields": {}, "error": "LLM not available"}
 
@@ -66,8 +66,23 @@ class LLMFieldExtractor:
                 f"定向={existing_slots.audience.value if existing_slots.audience else '未设置'}"
             )
 
+        _SLOT_LABEL = {
+            "scene": "营销场景(short_video/live)",
+            "goal": "营销目标(store_traffic/test_drive/lead_collection)",
+            "location": "投放地域",
+            "audience": "定向人群",
+            "budget": "预算(数字,元)",
+            "bid_strategy": "出价策略(manual/auto + 金额)",
+            "schedule": "排期(天数)",
+            "vehicle": "车型",
+        }
+        pending_hint = (
+            f"\n【当前系统正在追问字段】{_SLOT_LABEL.get(pending_slot, pending_slot)}，请优先从用户输入中提取该字段。"
+            if pending_slot else ""
+        )
+
         prompt = f"""
-你是汽车投放助手。请从用户输入中提取建计划字段，并返回严格 JSON（不要 markdown）。
+你是汽车投放助手。请从用户输入中提取建计划字段，并返回严格 JSON（不要 markdown）。{pending_hint}
 
 已有槽位：{existing_info}
 用户输入：{user_input}
@@ -86,6 +101,7 @@ class LLMFieldExtractor:
   "confidence": 0-1,
   "reasoning": "string"
 }}
+注意：只返回能从用户输入中确定的字段，无法确定的字段返回 null（不要猜测）。schedule.days 若无法确定必须返回 null 而非 0。
 """.strip()
 
         try:

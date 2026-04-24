@@ -27,8 +27,11 @@ _MORNING_KW = re.compile(r"早间|早上|上午|清晨|早晨")
 _ALLDAY_KW = re.compile(r"全天|全时段|不限时段|24小时")
 
 
-def parse_schedule(text: str) -> Optional[SlotField]:
-    """解析排期意图，返回 SlotField(ScheduleValue)"""
+def parse_schedule(text: str, pending_schedule: bool = False) -> Optional[SlotField]:
+    """解析排期意图，返回 SlotField(ScheduleValue)。
+
+    pending_schedule=True 时，纯数字输入视为天数（适用于槽位追问上下文）。
+    """
     days: int = 7
     confidence: float = 0.6  # 默认值时较低，有命中则提升
     source_parts: List[str] = []
@@ -61,6 +64,17 @@ def parse_schedule(text: str) -> Optional[SlotField]:
             time_slots.append(TimeSlot.EVENING)
             m4 = _EVENING_KW.search(text)
             source_parts.append(m4.group(0))  # type: ignore[union-attr]
+
+    # 上下文追问时：纯数字视为天数
+    if not matched_days and pending_schedule:
+        bare = re.fullmatch(r"\s*(\d+)\s*", text)
+        if bare:
+            val = int(bare.group(1))
+            if 1 <= val <= 365:
+                days = val
+                matched_days = True
+                confidence = 0.85
+                source_parts.append(bare.group(1))
 
     if not matched_days and not time_slots:
         return None  # 文本中完全没有排期信息
